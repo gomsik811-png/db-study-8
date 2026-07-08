@@ -23,6 +23,17 @@ select
 from student
 where deptno1 = 102;
 
+
+/*--------욘습------*/ 
+select
+    tel,
+    instr(tel,')'),
+    instr(tel,'-'),
+    substr(tel,instr(tel,')')+1),
+    --length(substr(tel,instr(tel,')')+1), 1, instr(substr,tel,instr(tel,')')+1),'-')-1
+    instr(tel,'-') - instr(tel,')')-1
+from student;
+
 select
     name,
     tel,
